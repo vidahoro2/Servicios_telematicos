@@ -39,10 +39,10 @@ function loadPyodideAndRun(pais="US") {
     .then(data => {
         //console.log(data);
         
-        let myLatLng = {lat: data[0][0], lng: data[0][1]};
+        let myLatLng = {lat: parseFloat(data[0][0]), lng: parseFloat(data[0][1])};
         mapaCreate(myLatLng)
         data.forEach(element => {
-            let myLatLng = {lat: element[0], lng: element[1]};
+            let myLatLng = {lat: parseFloat(element[0]), lng: parseFloat(element[1])};
             pointCreate(myLatLng,element[2])
         });
         

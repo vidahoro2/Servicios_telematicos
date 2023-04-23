@@ -9,7 +9,7 @@ CORS(app)
     
 @app.route('/filtrar_por_pais')
 def filtrar_por_pais():
-   dfDatosNoa = spark.read.json("./datos.json")
+   dfDatosNoa = spark.read.json("./datosNoa.json")
    pais = request.args.get('pais')
    df_filtrado = dfDatosNoa.filter(dfDatosNoa["pais"] == pais)
    json = df_filtrado.collect()
