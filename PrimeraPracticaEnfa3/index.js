@@ -7,8 +7,8 @@ let map;
 
 
 function initMap() {
-    searchInput = document.getElementById("search-input")
-    searchButton = document.getElementById("search-button")
+    searchInput = document.getElementById("pais")
+    searchButton = document.getElementById("filtrar")
     searchButton.addEventListener("click",click)
     //------------------------------------------
     loadPyodideAndRun()
